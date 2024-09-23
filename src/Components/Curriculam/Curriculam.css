@@ -1,0 +1,46 @@
+#curimg img{
+    width: 60px;
+    margin-right: 15px;
+}
+/* Main heading styling */
+#main_margin{
+    margin-left: 5px;
+}
+.headin {
+    position: relative;
+    font-size: 2.5rem; /* Adjust the font size as needed */
+    /* text-align: center; */
+    color: black; /* Ensure the text color stands out against the brush image */
+    margin: 1rem 0;
+    z-index: 10;
+  }
+  
+  /* Styling for the brush shade image and text overlay */
+  .brush-overlay {
+    display: inline-block;
+    position: relative;
+  }
+  
+  /* Position the brush shade behind the text */
+  .brush-shade {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-48%, -42%) scale(1.1) rotate(35deg); /* Added rotate to tilt the brush shade */
+    z-index: -1; /* Ensure the image is behind the text */
+    opacity: 0.8; /* Adjust opacity if needed to make text more readable */
+    width: 100%; /* Adjust width to fit the text */
+  }
+  
+  
+  /* Adjustments for responsiveness */
+  @media (max-width: 768px) {
+    .headin {
+      font-size: 2rem; /* Decrease font size for smaller screens */
+    }
+  
+    .brush-shade {
+      transform: translate(-48%, -42%) scale(1.1) rotate(35deg); /* Adjust the scale for smaller screens */
+    }
+  }
+  

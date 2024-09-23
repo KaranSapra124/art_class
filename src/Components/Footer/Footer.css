@@ -1,0 +1,147 @@
+/* Basic Styling */
+#footer-logo {
+    width: 60px;
+  }
+  
+  #left_margin_acct {
+    margin-left: 110px;
+  }
+  
+  .containeroo {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+  
+  #whole {
+    background-color: #171347;
+    color: #d1d0da;
+  }
+  
+  #dfclr a {
+    color: #eaecf3;
+    text-decoration: none;
+  }
+  
+  #art_love {
+    font-size: 8px;
+    margin-left: 9px;
+  }
+  
+  #button_margin {
+    margin-right: 10px;
+  }
+  
+  #button_margin:hover {
+    border: 2px black;
+    background-color: #d1d0da;
+    color: black;
+  }
+  
+  #dfclr a:hover {
+    color: #007bff;
+  }
+  
+  /* Footer Adjustments */
+  #footer-logo {
+    max-width: 150px;
+  }
+  
+  /* Responsive Design */
+  #account_section, #about_section, #company_section {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  #account_links, #about_links, #company_links {
+    padding-left: 0;
+    color: white;
+  }
+#button_margin{
+    background-color: white;
+}
+  
+  #social_links {
+    justify-content: center;
+  }
+  
+  #footer-logo-section {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  #footer_links {
+    justify-content: center;
+  }
+  
+  #footer-logo {
+    width: 80px;
+  }
+  
+  #art_love {
+    font-size: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .text-lg-right {
+      text-align: center;
+    }
+  
+    .mt-lg-0 {
+      margin-top: 20px !important;
+    }
+  
+    #enroll_btn {
+      display: block;
+      margin: 10px auto;
+    }
+  
+    #footer-logo {
+      width: 60px;
+    }
+  
+    #account_section, #about_section, #company_section {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  
+    #account_links li,
+    #about_links li,
+    #company_links li {
+      padding: 5px 0;
+    }
+  
+    #footer_links {
+      justify-content: center;
+      padding: 10px 0;
+    }
+  
+    #whole {
+      padding: 20px 10px;
+    }
+  }
+
+
+
+
+  /* Footer Link Styles */
+#whole a {
+    color: #ffffff; /* Set link color to white */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  #whole a:hover {
+    color: #d1d0da; /* Optional: Change color on hover */
+    text-decoration: underline; /* Optional: Add underline on hover */
+  }
+  
+  /* Additional styles if needed */
+  #dfclr a {
+    color: #ffffff; /* Ensure dfclr links are also white */
+    text-decoration: none;
+  }
+  
+  #dfclr a:hover {
+    color: #d1d0da; /* Optional: Change color on hover */
+  }
+  
+  

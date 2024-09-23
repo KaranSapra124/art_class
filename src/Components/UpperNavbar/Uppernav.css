@@ -1,0 +1,38 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: fit-content;
+}
+
+.left {
+    display: flex;
+    justify-content: center;
+    margin-left: 6px;
+}
+
+.right {
+    display: flex;
+    gap: 10px;
+    margin-right: 6px;
+    
+}
+
+.right img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.left img{
+    width: 25px;
+    margin-top: -14px;
+}
+.left p{
+    margin-left: 4px;
+    margin-right: 10px;
+    color: white;
+}
+.navbar{
+    background-color: rgba(109, 120, 136, 1);
+}
