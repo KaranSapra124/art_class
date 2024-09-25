@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Ensure to import Link for navigation
-import mn_pic from '../../assets/mn_pic.png';
+// import mn_pic from '../../assets/mn_pic.png';
 import arrow_icon from '../../assets/arrow_icon.svg';
+import newbkimg from '../../assets/new_background.png'
 import './Hero.css';
 
 const Hero = () => {
@@ -10,7 +11,7 @@ const Hero = () => {
       <div className="row g-0">
         <div className="col-12">
           <img 
-            src={mn_pic} 
+            src={newbkimg} 
             id="hero-image" 
             className="img-fluid" 
             alt="Art & Craft" 
@@ -22,7 +23,7 @@ const Hero = () => {
             <p className='hero-blue'>at Our Art Classes</p>
             
             <div id="hero-button-container">
-              <Link to="/about" id="about-link">
+              <Link to="/art_class/about" id="about-link">
                 <button type="button" id="about-button" className="btn btn-primary">
                   About Us
                   <img id='arrow-icon' src={arrow_icon} alt="arrow icon" />

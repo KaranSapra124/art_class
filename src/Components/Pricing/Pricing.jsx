@@ -19,7 +19,7 @@ const Pricing = () => {
 
       <div className="row justify-content-center">
         <div className="col-lg-4 col-md">
-          <div className="card card-pricing text-center px-3 hover-scale-110">
+          <div className="card card-pricing text-center px-3 hover-scale-110 card-marg">
             <div className="card-header py-5 border-0 delimiter-bottom">
               <div className="h1 text-center mb-0">Rs.<span className="price font-weight-bolder">1999/-</span></div>
               <span className="h6 text-muted">Standard Course</span>
@@ -31,7 +31,7 @@ const Pricing = () => {
                 <li>Youtube Support</li>
                 <li>one-to-one Support</li>
               </ul>
-              <Link to="/Formenroll">
+              <Link to="/art_class/Formenroll">
               <a id='first_btn'className="btn btn-sm btn-warning hover-translate-y-n3 hover-shadow-lg mb-3" target="_blank" rel="noopener noreferrer">Enroll Now</a>
               </Link>
             </div>
@@ -39,7 +39,7 @@ const Pricing = () => {
         </div>
 
         <div className="col-lg-4 col-md">
-          <div className="card card-pricing bg-primary text-center px-3 border-0 hover-scale-110">
+          <div className="card card-pricing bg-primary text-center px-3 border-0 hover-scale-110 card-marg">
             <div className="card-header py-5 border-0 delimiter-bottom">
               <div className="h1 text-white text-center mb-0">Rs.<span className="price font-weight-bolder">3999/-</span></div>
               <span className="h6 text-white">Premium</span>
@@ -52,7 +52,7 @@ const Pricing = () => {
                 <li>one-to-one Personalized</li>
                 <li>6 months technical support</li>
               </ul>
-              <Link to="/Formenroll">
+              <Link to="/art_class/Formenroll">
               <a id='second_btn' className="btn btn-sm btn-primary hover-translate-y-n3 hover-shadow-lg mb-3" target="_blank" rel="noopener noreferrer">
                 Enroll Now
               </a>
@@ -66,7 +66,7 @@ const Pricing = () => {
       <div className="mt-4 text-center">
         
         <p className="mb-2">Both pricings contain all 6 months free support. Need more?</p>
-       <Link to="/contact">
+       <Link to="/art_class/contact">
         <a className="text-primary" target="_blank" id='name-con'>
           Contact us
         </a></Link>

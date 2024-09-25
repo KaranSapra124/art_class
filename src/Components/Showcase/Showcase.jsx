@@ -16,13 +16,13 @@ const Showcase = () => {
           <h1 className="display-3 fw-bold">Show Case Art</h1>
           <h3 className="fw-normal text-muted mb-3">Art Makes the Life Beautiful</h3>
           <div className="d-flex gap-3 justify-content-center lead fw-normal">
-          <Link to="/workshop">
+          <Link to="/art_class/workshop">
             <a className="icon-link">
               Explore more
               <svg className="bi"><use xlinkHref="#chevron-right" /></svg>
             </a>
             </Link>
-            <Link to="/Formenroll">
+            <Link to="/art_class/Formenroll">
             <a className="icon-link">
               Enroll Now
               <svg className="bi"><use xlinkHref="#chevron-right" /></svg>

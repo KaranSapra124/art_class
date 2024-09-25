@@ -20,7 +20,7 @@ const Art_area = () => {
         <div className="row mx-lg-n4">
           {features.map((feature, index) => (
             <div className="col-lg-4 col-md-6 px-lg-4 square" key={index}>
-              <Link to={feature.link} className="card-link">
+              <Link to={`/art_class${feature.link}`} className="card-link">
                 <div className="card">
                   <div className="p-3 d-flex">
                     <div>
@@ -40,14 +40,13 @@ const Art_area = () => {
             </div>
           ))}
         </div>
-
-        
       </div>
       <hr className="featurette-divider" />
     </section>
   );
 };
 
+// Update the routes in the features array to include the '/art_class' path
 const features = [
   { title: "Painting", bgColor: "warning", link: "/painting" },
   { title: "Landscapes", bgColor: "primary", link: "/landscapes" },
@@ -56,7 +55,6 @@ const features = [
   { title: "Ceramic Work", bgColor: "info", link: "/ceremic" },
   { title: "Glass Painting", bgColor: "warning", link: "/glass" },
   { title: "Textile Arts", bgColor: "info", link: "/textile" },
-  { title: "Landscape", bgColor: "danger", link: "/landscapes" },
   { title: "Best Out of Waste", bgColor: "primary", link: "/waste" },
 ];
 

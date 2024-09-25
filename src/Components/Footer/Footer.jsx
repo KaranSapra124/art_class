@@ -11,9 +11,9 @@ const Footer = () => {
         <div className="col-lg-12">
           <div className="row align-items-center">
             <div className="col-lg-7">
-              <h3 className="text-secondary mb-2">Brilliant solutions for your ideas</h3>
+              <h3 className="text-secondary mb-2">Brilliant solutions for your ideas of creation</h3>
               <p className="lead mb-0 text-white opacity-8">
-                Build modern-looking websites fast and easy using Quick.
+                Build modern-looking arts using some basic fundamentals.
               </p>
             </div>
             <div className="col-lg-5 text-lg-right mt-4 mt-lg-0" >
@@ -26,7 +26,7 @@ const Footer = () => {
               >
                 <span className="btn-inner--text" style={{color:'black'}}>Documentation</span>
               </a>
-              <Link to="/Formenroll">
+              <Link to="/art_class/Formenroll">
                 <button
                   className="btn btn-primary my-2 ml-0 ml-sm-3"
                   id="enroll_btn"

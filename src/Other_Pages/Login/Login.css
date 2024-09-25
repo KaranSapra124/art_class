@@ -21,7 +21,7 @@
 /* Custom Responsive Design */
 @media (max-width: 768px) {
   #login-card-container {
-    padding: 2rem;
+    padding: 5px;
   }
 
   #login-card-body {
@@ -39,7 +39,7 @@
   }
 
   #login-card-body {
-    padding: 1rem;
+    padding: 5px;
   }
 
   #login-title h1 {

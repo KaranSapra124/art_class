@@ -1,59 +1,19 @@
 /* Container Styling */
-@media (min-width: 1200px) {
-    .container-xl, .container-lg, .container-md, .container-sm, .container {
-        max-width: 1140px;
-    }
+
+body {
+    overflow-x: hidden;
 }
 
-@media (min-width: 992px) {
-    .container-lg, .container-md, .container-sm, .container {
-        max-width: 94%;
-    }
-}
-
-@media (min-width: 768px) {
-    .container-md, .container-sm, .container {
-        max-width: 94%;
-    }
-}
-
-@media (min-width: 576px) {
-    .container-sm, .container {
-        max-width: 96%;
-    }
-}
-
-.container, .container-fluid, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
+#contact-info-container {
     --bs-gutter-x: 1.875rem;
     --bs-gutter-y: 0;
     width: 100%;
-    padding-right: calc(var(--bs-gutter-x) * 0.5);
-    padding-left: calc(var(--bs-gutter-x) * 0.5);
     margin-right: auto;
     margin-left: auto;
 }
 
-/* Ensure box-sizing */
-*, *::before, *::after {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-/* Avatar */
-.avatar {
-    display: inline-block;
-    position: relative;
-}
-
-.avatar-img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-}
-
 /* Card styling */
-.card-body {
+#address-card, #email-card, #phone-card {
     padding: 2rem;
 }
 
@@ -80,7 +40,7 @@
         max-width: 15%;
     }
     
-    .card-body {
+    #address-card, #email-card, #phone-card {
         padding: 1.5rem;
     }
 
@@ -97,6 +57,5 @@
     .row {
         flex-direction: column;
         padding: 1rem;
-   
     }
 }

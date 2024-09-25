@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css'
 import { Routes, Route } from 'react-router-dom'; // Import Routes and Route
 import Hero from './Components/Hero/Hero';
 import Curriculam from './Components/Curriculam/Curriculam';
@@ -41,7 +42,7 @@ const App = () => {
     <>
       <Routes>
         {/* Define routes for each page */}
-        <Route path="/" element={
+        <Route path="/art_class/" element={
           <>
             <Hero />
             <Curriculam />
@@ -53,27 +54,28 @@ const App = () => {
             <Customer />
           </>
         } />
-        <Route path="/about" element={<About />} />
-        <Route path="/classes" element={<Classes />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login/>}/>
-        <Route path="/SignUp" element={<SignUp/>}/>
-        <Route path="/Formenroll" element={<Formenroll/>}/>
-        <Route path="/Forget" element={<Forget/>}/>
-        <Route path="/ceremic" element={<Ceremic />} />
-        <Route path="/workshop" element={<Workshop />} />
-        <Route path="/tutorial" element={<Tutorial />} />
-        <Route path="/painting" element={<Painting/>}/>
-        <Route path="/abstract" element={<Abstract/>}/>
-        <Route path="/clay" element={<Clay/>}/>
-        <Route path="/glass" element={<Glass/>}/>
-        <Route path="/landscapes" element={<Landscapes/>}/>
-        <Route path="/mixed_media" element={<Mixed_media/>}/>
-        <Route path="/mosaic" element={<Mosaic/>}/>
-        <Route path="/paper_craft" element={<Paper_craft/>}/>
-        <Route path="/sculpture" element={<Sculpture/>}/>
-        <Route path="/textile" element={<Textile/>}/>
-        <Route path="/waste" element={<Waste/>}/>
+        {/* <Route path='/' element={<Home/>}/> */}
+        <Route path="/art_class/about" element={<About />} />
+        <Route path="/art_class/classes" element={<Classes />} />
+        <Route path="/art_class/contact" element={<Contact />} />
+        <Route path="/art_class/login" element={<Login/>}/>
+        <Route path="/art_class/SignUp" element={<SignUp/>}/>
+        <Route path="/art_class/Formenroll" element={<Formenroll/>}/>
+        <Route path="/art_class/Forget" element={<Forget/>}/>
+        <Route path="/art_class/ceremic" element={<Ceremic />} />
+        <Route path="/art_class/workshop" element={<Workshop />} />
+        <Route path="/art_class/tutorial" element={<Tutorial />} />
+        <Route path="/art_class/painting" element={<Painting/>}/>
+        <Route path="/art_class/abstract" element={<Abstract/>}/>
+        <Route path="/art_class/clay" element={<Clay/>}/>
+        <Route path="/art_class/glass" element={<Glass/>}/>
+        <Route path="/art_class/landscapes" element={<Landscapes/>}/>
+        <Route path="/art_class/mixed_media" element={<Mixed_media/>}/>
+        <Route path="/art_class/mosaic" element={<Mosaic/>}/>
+        <Route path="/art_class/paper_craft" element={<Paper_craft/>}/>
+        <Route path="/art_class/sculpture" element={<Sculpture/>}/>
+        <Route path="/art_class/textile" element={<Textile/>}/>
+        <Route path="/art_class/waste" element={<Waste/>}/>
       </Routes>
     </>
   );

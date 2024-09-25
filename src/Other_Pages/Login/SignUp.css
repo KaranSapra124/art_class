@@ -28,7 +28,7 @@
   /* Responsive Styling */
   @media (max-width: 768px) {
     #signup-card-container {
-      padding: 2rem;
+      padding: 5px;
     }
   
     #signup-card-body {

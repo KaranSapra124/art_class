@@ -41,7 +41,7 @@ const Forgot = () => {
                 </div>
                 <span>
                   Return to{' '}
-                  <Link to="/login" className="signin-link">sign in</Link>
+                  <Link to="/art_class/login" className="signin-link">sign in</Link>
                 </span>
               </form>
             </div>

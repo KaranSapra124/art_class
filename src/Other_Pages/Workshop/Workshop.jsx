@@ -26,7 +26,7 @@ const Workshop = () => {
           </div>
           <h3 className="fs-2 text-body-emphasis">Paintings</h3>
           <p>Capture the essence of your subjects in our portrait classes, focusing on realistic and expressive techniques. Develop your skills in capturing emotions and details to create stunning, lifelike portraits.</p>
-          <Link to="/painting" className="icon-link">
+          <Link to="/art_class/painting" className="icon-link">
             Explore Paintings
             <svg className="bi"><use xlinkHref="#chevron-right"></use></svg>
           </Link>
@@ -38,7 +38,7 @@ const Workshop = () => {
           </div>
           <h3 className="fs-2 text-body-emphasis">Landscapes</h3>
           <p>Immerse yourself in the beauty of nature with our landscape painting classes. Learn to translate outdoor scenes onto canvas, mastering techniques for capturing light, color, and atmosphere.</p>
-          <Link to="/landscapes" className="icon-link">
+          <Link to="/art_class/landscapes" className="icon-link">
             Explore Landscapes
             <svg className="bi"><use xlinkHref="#chevron-right"></use></svg>
           </Link>
@@ -50,7 +50,7 @@ const Workshop = () => {
           </div>
           <h3 className="fs-2 text-body-emphasis">Ceramic Work</h3>
           <p>Explore the world of ceramics with our hands-on classes, where you'll create unique, functional pieces from clay. From shaping and glazing to firing, learn the entire process of ceramic artistry.</p>
-          <Link to="/ceremic" className="icon-link">
+          <Link to="/art_class/ceremic" className="icon-link">
             Explore Ceramic Work
             <svg className="bi"><use xlinkHref="#chevron-right"></use></svg>
           </Link>
@@ -62,7 +62,7 @@ const Workshop = () => {
           </div>
           <h3 className="fs-2 text-body-emphasis">Glass Painting</h3>
           <p>Transform ordinary glass into beautiful works of art with our glass painting classes. Discover techniques for adding color and texture to glass surfaces, creating stunning stained glass and decorative pieces.</p>
-          <Link to="/glass" className="icon-link">
+          <Link to="/art_class/glass" className="icon-link">
             Explore Glass Painting
             <svg className="bi"><use xlinkHref="#chevron-right"></use></svg>
           </Link>
@@ -74,7 +74,7 @@ const Workshop = () => {
           </div>
           <h3 className="fs-2 text-body-emphasis">Best of Waste Material</h3>
           <p>Turn trash into treasure with our best of waste material classes. Learn innovative techniques to repurpose and create art from recycled materials, combining sustainability with creativity.</p>
-          <Link to="/waste" className="icon-link">
+          <Link to="/art_class/waste" className="icon-link">
             Explore Waste Work
             <svg className="bi"><use xlinkHref="#chevron-right"></use></svg>
           </Link>
@@ -86,7 +86,7 @@ const Workshop = () => {
           </div>
           <h3 className="fs-2 text-body-emphasis">Paper Craft</h3>
           <p>Elevate your creativity with our paper craft classes, where you'll explore a variety of techniques including origami, quilling, and card making. Create beautiful and intricate designs from simple paper.</p>
-          <Link to="/paper_craft" className="icon-link">
+          <Link to="/art_class/paper_craft" className="icon-link">
             Explore Paper Craft
             <svg className="bi"><use xlinkHref="#chevron-right"></use></svg>
           </Link>
@@ -98,7 +98,7 @@ const Workshop = () => {
           </div>
           <h3 className="fs-2 text-body-emphasis">Clay Work</h3>
           <p>Dive into the tactile world of clay work with our classes, where you'll learn to shape, sculpt, and glaze clay to create beautiful pottery and decorative items. Perfect for all skill levels.</p>
-          <Link to="/clay" className="icon-link">
+          <Link to="/art_class/clay" className="icon-link">
             Explore Clay Work
             <svg className="bi"><use xlinkHref="#chevron-right"></use></svg>
           </Link>
@@ -110,7 +110,7 @@ const Workshop = () => {
           </div>
           <h3 className="fs-2 text-body-emphasis">Textile Art</h3>
           <p>Discover the art of textile creation with our classes in fabric dyeing, embroidery, and weaving. Learn to transform textiles into unique, personalized art pieces with various techniques.</p>
-          <Link to="/textile" className="icon-link">
+          <Link to="/art_class/textile" className="icon-link">
             Explore Textile Arts
             <svg className="bi"><use xlinkHref="#chevron-right"></use></svg>
           </Link>
@@ -122,7 +122,7 @@ const Workshop = () => {
           </div>
           <h3 className="fs-2 text-body-emphasis">Mixed Media</h3>
           <p>Expand your artistic horizons with our mixed media classes, combining various materials and techniques to create dynamic and multi-dimensional artworks. Experiment with paint, collage, and more.</p>
-          <Link to="/mixed_media" className="icon-link">
+          <Link to="/art_class/mixed_media" className="icon-link">
             Explore Mixed Media
             <svg className="bi"><use xlinkHref="#chevron-right"></use></svg>
           </Link>
@@ -134,7 +134,7 @@ const Workshop = () => {
           </div>
           <h3 className="fs-2 text-body-emphasis">Sculpture</h3>
           <p>Bring your ideas to life with our sculpture classes, where you'll work with materials like clay, metal, and wood to create three-dimensional art pieces. Learn techniques for carving, modeling, and assembling sculptures.</p>
-          <Link to="/sculpture" className="icon-link">
+          <Link to="/art_class/sculpture" className="icon-link">
             Explore Sculptures
             <svg className="bi"><use xlinkHref="#chevron-right"></use></svg>
           </Link>
@@ -146,7 +146,7 @@ const Workshop = () => {
           </div>
           <h3 className="fs-2 text-body-emphasis">Mosaic Art</h3>
           <p>Delve into the intricate world of mosaic art, combining small pieces of glass, stone, or tile to create beautiful, detailed designs. Our classes will guide you through the process of planning, cutting, and assembling your mosaic artwork.</p>
-          <Link to="/mosaic" className="icon-link">
+          <Link to="/art_class/mosaic" className="icon-link">
             Explore Mosaic Arts
             <svg className="bi"><use xlinkHref="#chevron-right"></use></svg>
           </Link>
@@ -158,7 +158,7 @@ const Workshop = () => {
           </div>
           <h3 className="fs-2 text-body-emphasis">Abstract Art</h3>
           <p>Explore the freedom of abstract art in our classes, where you'll experiment with colors, shapes, and textures to create expressive and unique compositions. Break away from traditional forms and discover the beauty of abstraction.</p>
-          <Link to="/abstract" className="icon-link">
+          <Link to="/art_class/abstract" className="icon-link">
             Explore Abstract Arts
             <svg className="bi"><use xlinkHref="#chevron-right"></use></svg>
           </Link>
