@@ -10,7 +10,7 @@ import Art_area from "./Components/Art_Areas/Art_area";
 import Enroll from "./Components/Enrollment/Enroll";
 import Customer from "./Components/Customer/Customer";
 import Showcase from "./Components/Showcase/Showcase";
-import Art_workshop from "./Components/Art_Workshop/Art_workshop";
+import Art_workshop from "./Components/Art_workshop/Art_workshop";
 import Formenroll from "./Components/Formenroll/Formenroll";
 
 // Import the other pages from your "Other_Pages" folder
