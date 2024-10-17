@@ -6,6 +6,6 @@ module.exports.addCourse = async (req, res) => {
 };
 
 module.exports.getCourse = async (req, res) => {
-  const Courses = await Courses.find();
-  return res.status(201).send({ message: "New Course Added", Courses });
+  const CoursesData = await Courses.find();
+  return res.status(201).send({ message: "New Course Added", CoursesData });
 };
