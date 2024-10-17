@@ -20,7 +20,7 @@ module.exports.addUser = async (req, res) => {
 
 module.exports.authUser = async (req, res) => {
   const { userEmail, password } = req.body;
-  console.log(userEmail, password);
+  console.log(userEmail, password,'body');
   try {
     const foundUser = await User.findOne({ userEmail: userEmail });
     // console.log(foundUser,password);
