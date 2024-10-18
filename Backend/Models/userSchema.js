@@ -17,9 +17,15 @@ const userSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    enrollmentData: {
+      type: Object,
+    },
     plan: {
       type: String,
       default: null,
+    },
+    otp: {
+      type: Number,
     },
   },
   {
