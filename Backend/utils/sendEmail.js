@@ -1,16 +1,16 @@
 const nodemailer = require("nodemailer");
 require("dotenv").config();
 
-const sendMail = async (name, email, number, message) => {
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: process.env.EMAIL,
-      pass: process.env.PASSWORD,
-    },
-  });
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.EMAIL,
+    pass: process.env.PASSWORD,
+  },
+});
+exports.sendMail = async (name, email, number, message) => {
 
-//   console.log(process.env.PASSWORD, "PASSWORD");
+  //   console.log(process.env.PASSWORD, "PASSWORD");
 
   const info = await transporter.sendMail({
     from: `${name}, ${email}`,
@@ -53,4 +53,46 @@ const sendMail = async (name, email, number, message) => {
   console.log("Message sent: %s", info.messageId);
 };
 
-module.exports = sendMail;
+exports.sendEnrollMail = async (name, email, number, course) => {
+  const info = await transporter.sendMail({
+    from: `${name}, ${email}`,
+    to: process.env.EMAIL,
+    subject: `New Enrollment Received!`,
+    text: `New enrollment received from ${name}!`,
+    html: `
+    <div style="font-family: Arial, sans-serif; background-color: #f0f4f8; padding: 40px 0;">
+      <div style="max-width: 650px; margin: auto; background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+        
+        <h1 style="color: #333; font-size: 28px; text-align: center; margin-bottom: 20px; font-weight: 600;">New Enrollment Received!</h1>
+
+        <div style="border-top: 2px solid #eee; padding-top: 20px;">
+          <p style="color: #555; font-size: 16px; line-height: 1.6; margin-bottom: 12px;">
+            <strong style="color: #333;">Name:</strong> ${name}
+          </p>
+          
+          <p style="color: #555; font-size: 16px; line-height: 1.6; margin-bottom: 12px;">
+            <strong style="color: #333;">Email:</strong> ${email}
+          </p>
+          
+          <p style="color: #555; font-size: 16px; line-height: 1.6; margin-bottom: 12px;">
+            <strong style="color: #333;">Phone Number:</strong> ${number}
+          </p>
+          
+          <p style="color: #555; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+            <strong style="color: #333;">Course:</strong>
+            <div style="border-left: 4px solid #4CAF50; padding-left: 10px; margin-top: 8px; color: #333; font-style: italic;">
+              ${course}
+            </div>
+          </p>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+          <p style="font-size: 14px; color: #888;">This email was sent from your website's enrollment form.</p>
+        </div>
+        
+      </div>
+    </div>
+    `,
+  });
+  console.log("Message sent for enrollment: %s", info.messageId);
+}

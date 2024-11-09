@@ -1,7 +1,7 @@
 const contactSchema = require("../Models/contactSchema");
 const User = require("../Models/userSchema");
 const { hashPassword, comparePassword } = require("../utils/bcryptConfig");
-const sendMail = require("../utils/sendEmail");
+const { sendEnrollMail, sendMail } = require("../utils/sendEmail");
 const sendOTP = require("../utils/sendOtp");
 
 module.exports.addUser = async (req, res) => {
@@ -46,7 +46,17 @@ module.exports.addContact = async (req, res) => {
 };
 
 module.exports.addEnrollment = async (req, res) => {
-  console.log(req.body);
+  const { fullName, course, phone, email } = req.body
+  console.log(email,"EMAIL")
+  const user = await User.findOne({ userEmail: email })
+  if (!user) {
+    return res.status(403).send({ message: "No User Found!" })
+  } else {
+    user.enrollmentData = req.body
+    await user.save()
+    await sendEnrollMail(fullName, email, phone, course);
+    return res.status(201).send({ message: "Enrollment Request Sent!" })
+  }
 };
 
 module.exports.forgetPassword = async (req, res) => {
