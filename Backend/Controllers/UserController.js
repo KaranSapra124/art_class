@@ -1,7 +1,11 @@
 const contactSchema = require("../Models/contactSchema");
 const User = require("../Models/userSchema");
 const { hashPassword, comparePassword } = require("../utils/bcryptConfig");
-const { sendEnrollMail, sendMail } = require("../utils/sendEmail");
+const {
+  sendEnrollMail,
+  sendMail,
+  sendContactReply,
+} = require("../utils/sendEmail");
 const sendOTP = require("../utils/sendOtp");
 
 module.exports.addUser = async (req, res) => {
@@ -24,7 +28,7 @@ module.exports.authUser = async (req, res) => {
   console.log(userEmail, password, "body");
   try {
     const foundUser = await User.findOne({ userEmail: userEmail });
-    // console.log(foundUser,password);
+    console.log(foundUser);
 
     if (await comparePassword(password, foundUser?.password)) {
       return res
@@ -40,22 +44,23 @@ module.exports.authUser = async (req, res) => {
 
 module.exports.addContact = async (req, res) => {
   const { userName, userEmail, userMessage, userNumber } = req.body;
-  const newContact = await contactSchema.create(req.body);
+  await contactSchema.create(req.body);
   await sendMail(userName, userEmail, userNumber, userMessage);
+  await sendContactReply(userName, userEmail, userNumber);
   return res.status(201).send({ message: "Query Sent!" });
 };
 
 module.exports.addEnrollment = async (req, res) => {
-  const { fullName, course, phone, email } = req.body
-  console.log(email,"EMAIL")
-  const user = await User.findOne({ userEmail: email })
+  const { fullName, course, phone, email } = req.body;
+  console.log(email, "EMAIL");
+  const user = await User.findOne({ userEmail: email });
   if (!user) {
-    return res.status(403).send({ message: "No User Found!" })
+    return res.status(403).send({ message: "No User Found!" });
   } else {
-    user.enrollmentData = req.body
-    await user.save()
+    user.enrollmentData = req.body;
+    await user.save();
     await sendEnrollMail(fullName, email, phone, course);
-    return res.status(201).send({ message: "Enrollment Request Sent!" })
+    return res.status(201).send({ message: "Enrollment Request Sent!" });
   }
 };
 

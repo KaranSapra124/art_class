@@ -9,7 +9,6 @@ const transporter = nodemailer.createTransport({
   },
 });
 exports.sendMail = async (name, email, number, message) => {
-
   //   console.log(process.env.PASSWORD, "PASSWORD");
 
   const info = await transporter.sendMail({
@@ -95,4 +94,57 @@ exports.sendEnrollMail = async (name, email, number, course) => {
     `,
   });
   console.log("Message sent for enrollment: %s", info.messageId);
-}
+};
+
+exports.sendContactReply = async (name, email, number) => {
+  const info = await transporter.sendMail({
+    from: `${name}, ${email}`,
+    to: process.env.EMAIL,
+    subject: `New Enrollment Received!`,
+    text: `New enrollment received from ${name}!`,
+    html: ` <div style={{
+      fontFamily: 'Arial, sans-serif',
+      margin: '0',
+      padding: '0',
+      backgroundColor: '#f9f9f9',
+      color: '#333',
+      maxWidth: '600px',
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      background: '#fff',
+      padding: '20px',
+      borderRadius: '8px',
+      boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)'
+  }}>
+      <h1 style={{
+          fontSize: '24px',
+          color: '#444',
+          textAlign: 'center'
+      }}>Acknowledgement of Your Inquiry</h1>
+      <p>Dear <span style={{ color: '#0066cc', fontWeight: 'bold' }}>${name}</span>,</p>
+      <p>Thank you for contacting <strong>Tara Art Classes</strong>! We’ve successfully received your message and are currently reviewing your inquiry. Expect to hear from us within 24–48 hours.</p>
+      <p>If you need assistance in the meantime, please use the details below:</p>
+      <div style={{ marginTop: '20px' }}>
+          <p>📞 <strong>Phone:</strong> 8130011848</p>
+          <p>📧 <strong>Email:</strong> <a href="mailto:taraartclass@gmail.com" style={{ textDecoration: 'none', color: '#0066cc' }}>taraartclass@gmail.com</a></p>
+      </div>
+      <p>Looking for inspiration? Visit our website to explore:</p>
+      <ul>
+          <li>🎨 <strong>Courses and Workshops</strong> tailored to all skill levels.</li>
+          <li>🖼️ <strong>Gallery of Student Artwork</strong> for a sneak peek at our creative community.</li>
+      </ul>
+      <p>We look forward to being a part of your artistic journey!</p>
+      <div style={{
+          marginTop: '20px',
+          textAlign: 'center',
+          fontSize: '14px',
+          color: '#666'
+      }}>
+          <p>Kind regards,</p>
+          <p><strong>Tara Art Classes Team</strong></p>
+          <p>🎨 Transforming passion into masterpieces.</p>
+      </div>
+  </div>`,
+  });
+  console.log("Message sent for enrollment: %s", info.messageId);
+};
