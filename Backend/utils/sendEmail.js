@@ -100,8 +100,8 @@ exports.sendContactReply = async (name, email, number) => {
   const info = await transporter.sendMail({
     from: process.env.EMAIL,
     to: email,
-    subject: `New Enrollment Received!`,
-    text: `New enrollment received from ${name}!`,
+    subject: `Thanks for contacting`,
+    text: `Inquiry received successfully`,
     html: ` <div style={{
       fontFamily: 'Arial, sans-serif',
       margin: '0',
