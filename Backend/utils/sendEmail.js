@@ -56,8 +56,8 @@ exports.sendEnrollMail = async (name, email, number, course) => {
   const info = await transporter.sendMail({
     from: `${name}, ${email}`,
     to: process.env.EMAIL,
-    subject: `New Enrollment Received!`,
-    text: `New enrollment received from ${name}!`,
+    subject: `Thanks for contacting!`,
+    text: `Thanks for contacting , ${name}!`,
     html: `
     <div style="font-family: Arial, sans-serif; background-color: #f0f4f8; padding: 40px 0;">
       <div style="max-width: 650px; margin: auto; background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
@@ -100,8 +100,8 @@ exports.sendContactReply = async (name, email, number) => {
   const info = await transporter.sendMail({
     from: process.env.EMAIL,
     to: email,
-    subject: `Thanks for contacting`,
-    text: `Inquiry received successfully`,
+    subject: `New Enrollment Received!`,
+    text: `New enrollment received from ${name}!`,
     html: ` <div style={{
       fontFamily: 'Arial, sans-serif',
       margin: '0',
