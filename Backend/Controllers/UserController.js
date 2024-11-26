@@ -44,6 +44,7 @@ module.exports.authUser = async (req, res) => {
 
 module.exports.addContact = async (req, res) => {
   const { userName, userEmail, userMessage, userNumber } = req.body;
+  console.log("ADD CONTACT")
   await contactSchema.create(req.body);
   await sendMail(userName, userEmail, userNumber, userMessage);
   await sendContactReply(userName, userEmail, userNumber);
